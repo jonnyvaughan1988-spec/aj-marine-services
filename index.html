@@ -47,6 +47,33 @@
   .credit { margin-top: 8px; text-align: center; font-weight: normal; font-size: 11px; letter-spacing: 0; color: #6f8aa6; }
   .credit a { color: #8fa9c4; }
   @media (max-width: 600px) { .header { padding: 70px 16px 60px; } .header h1 { font-size: 30px; letter-spacing: 2px; } .area-photo { height: 180px; } }
+  .trust { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 24px 0 8px; }
+  .badge { flex: 1 1 200px; text-align: center; padding: 12px 14px; border-radius: 8px; font-weight: bold; font-size: 15px;
+           background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,75,0.55); color: #fff; }
+  .badge::before { content: "\2713"; color: var(--gold); margin-right: 8px; }
+  .guide-prices { margin: 14px 0 0; font-size: 14px; color: #b9cde0; text-align: center; }
+  .guide-prices strong { color: #fff; }
+  .note { display: block; font-size: 12px; color: #8fa9c4; font-style: italic; margin-top: 4px; }
+  .spots { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .spots li { padding: 5px 14px; border-radius: 20px; background: rgba(43,179,163,0.15); border: 1px solid rgba(43,179,163,0.5); font-size: 14px; }
+  .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+  .ba-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; overflow: hidden; }
+  .ba-pair { display: grid; grid-template-columns: 1fr 1fr; }
+  .ba-slot { height: 130px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 12px;
+             color: #8fa9c4; border: 1px dashed rgba(143,169,196,0.6); margin: 6px; border-radius: 6px; background: rgba(11,31,58,0.5); }
+  .ba-card p { margin: 0; padding: 10px 12px; font-size: 14px; color: #fff; }
+  .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+  .review { background: rgba(255,255,255,0.05); border-left: 4px solid var(--gold); border-radius: 8px; padding: 16px 18px; }
+  .review blockquote { margin: 0 0 10px; font-style: italic; color: #e8f1f8; }
+  .review cite { font-style: normal; font-weight: bold; color: var(--gold); font-size: 14px; }
+  .placeholder-tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--navy);
+                     background: #8fa9c4; border-radius: 4px; padding: 2px 6px; margin-bottom: 8px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 6px; }
+  .btn { display: inline-block; padding: 14px 26px; border-radius: 30px; font-weight: bold; font-size: 17px; text-decoration: none; text-align: center; }
+  .contact a.btn-quote, .btn-quote { background: var(--gold); color: var(--navy); margin: 0; }
+  .contact a.btn-quote:hover { background: #e6bd62; }
+  .contact a.btn-wa, .btn-wa { background: #25d366; color: #0b1f3a; margin: 0; }
+  .contact a.btn-wa:hover { background: #3ee07a; }
   .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15);
             text-align: center; font-weight: bold; font-size: 14px; color: #8fa9c4; letter-spacing: 1px; }
 </style>
@@ -56,6 +83,12 @@
   <div class="header">
     <h1>A &amp; J MARINE SERVICES</h1>
     <p>Boat Cleaning &bull; Hull Treatments &bull; Anti-Fouling &bull; Teak Treatments/Restorations &bull; Propeller Refurbishment</p>
+  </div>
+
+  <div class="trust">
+    <div class="badge">Mobile &mdash; we come to your mooring</div>
+    <div class="badge">Free quotes</div>
+    <div class="badge">Fully insured</div>
   </div>
 
   <h2>SERVICES</h2>
@@ -68,19 +101,56 @@
       <li><strong>Propeller Refurbishment</strong><span>Cleaning and refurbishing propellers for efficient, reliable running.</span></li>
     </ul>
     <p class="more-services">More services available &mdash; get in touch to discuss what your boat needs.</p>
+    <p class="guide-prices"><strong>Guide price:</strong> hull polish &amp; wax from &pound;6 per foot. Anti-fouling and propeller work priced on request.
+      <span class="note">Guide prices only &mdash; every boat is different, so ask for an exact quote.</span></p>
   </div>
 
   <h2>AREA COVERED</h2>
   <div class="area">
     Based in Poole, Dorset, covering Poole Harbour and nearby areas.
+    <ul class="spots">
+      <li>Poole Quay</li>
+      <li>Cobbs Quay</li>
+      <li>Salterns</li>
+      <li>Sandbanks</li>
+    </ul>
   </div>
   <img class="area-photo" src="images/poole-harbour-boats.jpg" alt="Motor boats and sailing boats on Poole Harbour, Dorset" loading="lazy">
+
+  <h2>BEFORE &amp; AFTER</h2>
+  <div class="ba-grid">
+    <div class="ba-card"><div class="ba-pair"><div class="ba-slot">Photo coming soon<br>(before)</div><div class="ba-slot">Photo coming soon<br>(after)</div></div>
+      <p>Fouled hull &rarr; fresh anti-foul</p></div>
+    <div class="ba-card"><div class="ba-pair"><div class="ba-slot">Photo coming soon<br>(before)</div><div class="ba-slot">Photo coming soon<br>(after)</div></div>
+      <p>Grey, weathered teak &rarr; restored teak</p></div>
+    <div class="ba-card"><div class="ba-pair"><div class="ba-slot">Photo coming soon<br>(before)</div><div class="ba-slot">Photo coming soon<br>(after)</div></div>
+      <p>Crusty propeller &rarr; polished propeller</p></div>
+  </div>
+  <!-- PLACEHOLDERS: replace each .ba-slot div with <img src="images/your-photo.jpg" alt="..."> -->
+
+  <h2>WHAT CUSTOMERS SAY</h2>
+  <!-- EXAMPLE REVIEWS: replace with real customer reviews, then remove the "Example review" tags -->
+  <div class="reviews">
+    <div class="review"><span class="placeholder-tag">Example review</span>
+      <blockquote>"Hull came up like new and the anti-foul was done in a day. Couldn't be happier."</blockquote>
+      <cite>Dave &mdash; Sealine S34, Cobbs Quay</cite></div>
+    <div class="review"><span class="placeholder-tag">Example review</span>
+      <blockquote>"Our teak deck was grey and tired. Now it looks the way it did when we bought her."</blockquote>
+      <cite>Sarah &mdash; Fairline Targa 38, Poole Quay</cite></div>
+    <div class="review"><span class="placeholder-tag">Example review</span>
+      <blockquote>"Reliable, friendly and came straight to our mooring. Prop is spotless."</blockquote>
+      <cite>Mike &mdash; Sunseeker Portofino 35, Salterns</cite></div>
+  </div>
 
   <h2>CONTACT</h2>
   <div class="contact">
     <div><strong>Get a quote or book a job</strong></div>
     <div>Mobile: <a href="tel:+447368451140">07368 451140</a></div>
     <div>Mobile: <a href="tel:+447708004803">07708 004803</a></div>
+    <div class="cta-row">
+      <a class="btn btn-quote" href="https://wa.me/447368451140?text=Hi%20A%20%26%20J%20Marine%20Services%2C%20I%27d%20like%20a%20free%20quote.%20Boat%20type%2Flength%3A%20%20Marina%2Fmooring%3A%20" target="_blank" rel="noopener">Get a free quote</a>
+      <a class="btn btn-wa" href="https://wa.me/447368451140" target="_blank" rel="noopener">WhatsApp us your boat photos</a>
+    </div>
   </div>
 
   <div class="footer">A &amp; J Marine Services &bull; Poole, UK
