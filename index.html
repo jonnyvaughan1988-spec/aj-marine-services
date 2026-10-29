@@ -5,17 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A &amp; J Marine Services - Poole</title>
 <meta name="description" content="A &amp; J Marine Services: boat cleaning, hull treatments, anti-fouling, teak restoration and propeller refurbishment in Poole and nearby.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root { --navy: #0b1f3a; --ocean: #12355b; --teal: #2bb3a3; --gold: #d4a84b; --foam: #e8f1f8; }
   * { box-sizing: border-box; }
   body { font-family: Arial, sans-serif; margin: 0; color: var(--foam); line-height: 1.6;
          background: linear-gradient(180deg, var(--navy) 0%, var(--ocean) 100%); min-height: 100vh; }
   .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px 40px; }
-  .header { text-align: center; padding: 56px 20px 40px; border-bottom: 3px solid var(--gold);
-            background: radial-gradient(ellipse at top, rgba(43,179,163,0.18), transparent 70%); }
-  .header h1 { margin: 0; font-size: 34px; letter-spacing: 3px; color: #fff; }
-  .header h1::after { content: ""; display: block; width: 70px; height: 3px; background: var(--gold); margin: 16px auto 0; }
-  .header p { margin: 16px 0 0; color: var(--teal); font-size: 15px; letter-spacing: 0.5px; }
+  .header { text-align: center; padding: 110px 20px 90px; border-bottom: 3px solid var(--gold); border-radius: 0 0 8px 8px;
+            background: linear-gradient(180deg, rgba(11,31,58,0.55) 0%, rgba(11,31,58,0.35) 45%, rgba(11,31,58,0.85) 100%),
+                        url("images/poole-harbour-sailboats.jpg") center 40% / cover no-repeat; }
+  .header h1 { margin: 0; font-family: "Cinzel", Georgia, "Times New Roman", serif; font-weight: 700; font-size: 44px;
+               letter-spacing: 4px; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
+  .header h1::after { content: ""; display: block; width: 90px; height: 3px; background: var(--gold); margin: 18px auto 0; }
+  .header p { margin: 18px 0 0; color: #dff6f2; text-shadow: 0 1px 6px rgba(0,0,0,0.7); font-size: 15px; letter-spacing: 0.5px; }
   h2 { font-size: 20px; letter-spacing: 2px; color: var(--gold); border-bottom: 1px solid rgba(212,168,75,0.4);
        padding-bottom: 6px; margin-top: 40px; }
   .services-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(43,179,163,0.45);
@@ -35,6 +40,11 @@
   .contact a { display: inline-block; margin-left: 6px; padding: 8px 18px; border-radius: 24px;
                background: var(--teal); color: var(--navy); font-weight: bold; text-decoration: none; transition: background 0.2s; }
   .contact a:hover { background: var(--gold); }
+  .area-photo { display: block; width: 100%; height: 260px; object-fit: cover; border-radius: 8px;
+                border: 1px solid rgba(255,255,255,0.15); margin: 20px 0 0; }
+  .credit { margin-top: 8px; text-align: center; font-weight: normal; font-size: 11px; letter-spacing: 0; color: #6f8aa6; }
+  .credit a { color: #8fa9c4; }
+  @media (max-width: 600px) { .header { padding: 70px 16px 60px; } .header h1 { font-size: 30px; letter-spacing: 2px; } .area-photo { height: 180px; } }
   .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15);
             text-align: center; font-weight: bold; font-size: 14px; color: #8fa9c4; letter-spacing: 1px; }
 </style>
@@ -61,6 +71,7 @@
   <div class="area">
     Based in Poole, Dorset, covering Poole Harbour and nearby areas.
   </div>
+  <img class="area-photo" src="images/poole-harbour-boats.jpg" alt="Motor boats and sailing boats on Poole Harbour, Dorset" loading="lazy">
 
   <h2>CONTACT</h2>
   <div class="contact">
@@ -69,7 +80,9 @@
     <div>Mobile: <a href="tel:+447708004803">07708 004803</a></div>
   </div>
 
-  <div class="footer">A &amp; J Marine Services &bull; Poole, UK</div>
+  <div class="footer">A &amp; J Marine Services &bull; Poole, UK
+    <div class="credit">Photos: Boats in Poole Harbour by Peter Trimming, via <a href="https://commons.wikimedia.org/wiki/File:Boats_in_Poole_Harbour,_Dorset_-_geograph.org.uk_-_1881735.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></div>
+  </div>
 </div>
 </body>
 </html>
