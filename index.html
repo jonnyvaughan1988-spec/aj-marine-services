@@ -6,22 +6,41 @@
 <title>A &amp; J Marine Services - Poole</title>
 <meta name="description" content="A &amp; J Marine Services: boat cleaning, hull treatments, anti-fouling, teak restoration and propeller refurbishment in Poole and nearby.">
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #222; line-height: 1.5; }
-  .header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
-  .header p { margin: 4px 0 20px; color: #555; font-size: 14px; }
-  h2 { font-size: 22px; border-bottom: 2px solid #222; padding-bottom: 4px; margin-top: 32px; }
-  .services-box { border: 2px solid #222; padding: 16px; margin: 20px 0; }
-  .services-box ul { margin: 0; padding-left: 20px; }
-  .services-box li { margin: 10px 0; }
-  .services-box li span { display: block; color: #555; font-size: 14px; }
-  .area { margin: 20px 0; border: 1px solid #999; padding: 12px; }
-  .contact { margin: 20px 0; border: 1px solid #999; padding: 12px; }
-  .contact div { margin: 6px 0; }
-  .contact a { color: #222; }
-  .footer { margin-top: 30px; font-weight: bold; font-size: 15px; }
+  :root { --navy: #0b1f3a; --ocean: #12355b; --teal: #2bb3a3; --gold: #d4a84b; --foam: #e8f1f8; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; margin: 0; color: var(--foam); line-height: 1.6;
+         background: linear-gradient(180deg, var(--navy) 0%, var(--ocean) 100%); min-height: 100vh; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px 40px; }
+  .header { text-align: center; padding: 56px 20px 40px; border-bottom: 3px solid var(--gold);
+            background: radial-gradient(ellipse at top, rgba(43,179,163,0.18), transparent 70%); }
+  .header h1 { margin: 0; font-size: 34px; letter-spacing: 3px; color: #fff; }
+  .header h1::after { content: ""; display: block; width: 70px; height: 3px; background: var(--gold); margin: 16px auto 0; }
+  .header p { margin: 16px 0 0; color: var(--teal); font-size: 15px; letter-spacing: 0.5px; }
+  h2 { font-size: 20px; letter-spacing: 2px; color: var(--gold); border-bottom: 1px solid rgba(212,168,75,0.4);
+       padding-bottom: 6px; margin-top: 40px; }
+  .services-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(43,179,163,0.45);
+                  border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+  .services-box ul { margin: 0; padding: 0; list-style: none; }
+  .services-box li { margin: 0; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .services-box li:last-child { border-bottom: none; }
+  .services-box li strong { color: #fff; font-size: 17px; }
+  .services-box li strong::before { content: "\2693"; color: var(--gold); margin-right: 10px; }
+  .services-box li span { display: block; color: #b9cde0; font-size: 14px; margin-left: 28px; }
+  .area { margin: 20px 0; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+          border-radius: 8px; padding: 16px 20px; }
+  .contact { margin: 20px 0; background: rgba(212,168,75,0.08); border: 2px solid var(--gold);
+             border-radius: 8px; padding: 20px 24px; }
+  .contact div { margin: 10px 0; }
+  .contact div:first-child strong { color: var(--gold); font-size: 18px; }
+  .contact a { display: inline-block; margin-left: 6px; padding: 8px 18px; border-radius: 24px;
+               background: var(--teal); color: var(--navy); font-weight: bold; text-decoration: none; transition: background 0.2s; }
+  .contact a:hover { background: var(--gold); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center; font-weight: bold; font-size: 14px; color: #8fa9c4; letter-spacing: 1px; }
 </style>
 </head>
 <body>
+<div class="wrap">
   <div class="header">
     <h1>A &amp; J MARINE SERVICES</h1>
     <p>Boat Cleaning &bull; Hull Treatments &bull; Anti-Fouling &bull; Teak Treatments/Restorations &bull; Propeller Refurbishment</p>
@@ -51,5 +70,6 @@
   </div>
 
   <div class="footer">A &amp; J Marine Services &bull; Poole, UK</div>
+</div>
 </body>
 </html>
